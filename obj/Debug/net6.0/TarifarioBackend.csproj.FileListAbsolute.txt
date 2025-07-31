@@ -1,0 +1,7 @@
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.AssemblyInfo.cs
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Documents\Desarrollos\COMERCIAL\backend\net\TarifarioBackend\obj\Debug\net6.0\TarifarioBackend.MvcApplicationPartsAssemblyInfo.cache
