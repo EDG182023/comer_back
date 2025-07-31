@@ -175,19 +175,6 @@ namespace TarifarioBackend.Models
         public Categoria? Categoria { get; set; }
     }
 
-    public class TipoTarifa : BaseModel
-    {
-        [Required]
-        [StringLength(50)]
-        public string Nombre { get; set; } = string.Empty;
-    }
-
-    public class Categoria : BaseModel
-    {
-        [Required]
-        [StringLength(50)]
-        public string Nombre { get; set; } = string.Empty;
-    }
 
     public class Tarifario
     {
