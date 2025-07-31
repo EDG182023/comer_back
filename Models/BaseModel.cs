@@ -10,6 +10,7 @@ namespace TarifarioBackend.Models
         public int Id { get; set; }
         public DateTime FechaCreacion { get; set; } = DateTime.Now;
         public DateTime? FechaModificacion { get; set; }
+        public DateTime? FechaActualizacion { get; set; }
         public bool Activo { get; set; } = true;
     }
 }

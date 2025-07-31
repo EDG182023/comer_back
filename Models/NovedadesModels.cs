@@ -5,58 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TarifarioBackend.Models
 {
-    public class NovedadComprobanteRequest
-    {
-        [Required]
-        public int IdNovedad { get; set; }
-        [Required]
-        public string Fecha { get; set; } = string.Empty;
-        [Required]
-        public string Descripcion { get; set; } = string.Empty;
-        [Required]
-        public string EmailDestinatario { get; set; } = string.Empty;
-        public string? UsuarioResolvente { get; set; }
-    }
-
-    public class NovedadComprobanteResponse
-    {
-        public bool Success { get; set; }
-        public string? Error { get; set; }
-        public ComprobanteDetails? Comprobante { get; set; }
-    }
-
-    public class ComprobanteDetails
-    {
-        public string Numero { get; set; } = string.Empty;
-        public string Cliente { get; set; } = string.Empty;
-        public string RazonSocial { get; set; } = string.Empty;
-        public string Fecha { get; set; } = string.Empty;
-        public bool EmailEnviado { get; set; }
-        public string EmailDestinatario { get; set; } = string.Empty;
-    }
-
-    public class NovedadesMultiplesRequest
-    {
-        [Required]
-        public List<int> IdsNovedades { get; set; } = new List<int>();
-        [Required]
-        public string Fecha { get; set; } = string.Empty;
-        public string Descripcion { get; set; } = string.Empty;
-        public string EmailDestinatario { get; set; } = string.Empty;
-        public string? UsuarioResolvente { get; set; }
-    }
-
-    public class IgnorarNovedadRequest
-    {
-        [Required]
-        public int IdNovedad { get; set; }
-    }
-
-    public class IgnorarMultiplesRequest
-    {
-        [Required]
-        public List<int> IdsNovedades { get; set; } = new List<int>();
-    }
 
     public class NovedadFilter
     {
@@ -112,48 +60,4 @@ namespace TarifarioBackend.Models
         public string Estado { get; set; } = string.Empty;
     }
 
-    public class ReimprimirPdfMasivoRequest
-    {
-        [Required]
-        public List<int> Ids { get; set; } = new List<int>();
-    }
-
-    public class ReenviarMailRequest
-    {
-        [Required]
-        public int Id { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
-    }
-
-    public class ReenviarMailMasivoRequest
-    {
-        [Required]
-        public List<int> Ids { get; set; } = new List<int>();
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
-    }
-
-    public class Novedad
-    {
-        [Key]
-        public int IdNovedad { get; set; }
-        public string NumeroComprobante { get; set; }
-        public DateTime FechaNovedad { get; set; }
-        public string Descripcion { get; set; }
-        public int IdTipoNovedad { get; set; }
-        public bool Ignorada { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime? FechaActualizacion { get; set; }
-    }
-
-    public class TipoNovedad
-    {
-        [Key]
-        public int IdTipoNovedad { get; set; }
-        public string Descripcion { get; set; }
-        public bool Activo { get; set; }
-    }
 }

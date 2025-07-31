@@ -4,7 +4,7 @@ using TarifarioBackend.Data;
 using TarifarioBackend.Services;
 using TarifarioBackend.Helpers;
 using TarifarioBackend.Models; // For EmailSettings and PdfSettings
-using QuestPDF.Settings; // Import the QuestPDF.Settings namespace
+using QuestPDF.Infrastructure; // Import QuestPDF infrastructure
 using Microsoft.Extensions.Options; // Required for IOptions
 using Microsoft.AspNetCore.Hosting; // Required for IWebHostEnvironment
 using System.IO;
@@ -12,7 +12,7 @@ using System.IO;
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure QuestPDF to not show debug data
-QuestPDF.Settings.License = QuestPDF.Settings.LicenseType.Community;
+Settings.License = LicenseType.Community;
 
 // Add services to the container.
 builder.Services.AddControllers();
