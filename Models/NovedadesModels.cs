@@ -35,28 +35,8 @@ namespace TarifarioBackend.Models
         public string EmailDestinatario { get; set; } = string.Empty;
     }
 
-    public class NovedadesMultiplesRequest
-    {
-        [Required]
-        public List<int> IdsNovedades { get; set; } = new List<int>();
-        [Required]
-        public string Fecha { get; set; } = string.Empty;
-        public string Descripcion { get; set; } = string.Empty;
-        public string EmailDestinatario { get; set; } = string.Empty;
-        public string? UsuarioResolvente { get; set; }
-    }
-
-    public class IgnorarNovedadRequest
-    {
-        [Required]
-        public int IdNovedad { get; set; }
-    }
-
-    public class IgnorarMultiplesRequest
-    {
-        [Required]
-        public List<int> IdsNovedades { get; set; } = new List<int>();
-    }
+    /* Requests related to updating or ignoring novelties are defined in
+       Models/Requests.cs to avoid duplication. */
 
     public class NovedadFilter
     {
@@ -112,48 +92,6 @@ namespace TarifarioBackend.Models
         public string Estado { get; set; } = string.Empty;
     }
 
-    public class ReimprimirPdfMasivoRequest
-    {
-        [Required]
-        public List<int> Ids { get; set; } = new List<int>();
-    }
-
-    public class ReenviarMailRequest
-    {
-        [Required]
-        public int Id { get; set; }
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
-    }
-
-    public class ReenviarMailMasivoRequest
-    {
-        [Required]
-        public List<int> Ids { get; set; } = new List<int>();
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
-    }
-
-    public class Novedad
-    {
-        [Key]
-        public int IdNovedad { get; set; }
-        public string NumeroComprobante { get; set; }
-        public DateTime FechaNovedad { get; set; }
-        public string Descripcion { get; set; }
-        public int IdTipoNovedad { get; set; }
-        public bool Ignorada { get; set; }
-        public DateTime FechaCreacion { get; set; }
-        public DateTime? FechaActualizacion { get; set; }
-    }
-
-    public class TipoNovedad
-    {
-        [Key]
-        public int IdTipoNovedad { get; set; }
-        public string Descripcion { get; set; }
-        public bool Activo { get; set; }
-    }
+    /* Additional request DTOs and the domain entities Novedad and TipoNovedad
+       are declared in other model files. */
 }
